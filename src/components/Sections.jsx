@@ -22,28 +22,28 @@ function Features() {
 
   const icpCards = [
     {
-      role: "Partnership team",
-      name: "Ava Patel",
-      avatar: "https://i.pravatar.cc/120?img=65",
-      blurb: "We finally have a single source of truth for partner influence. Deal cycles are down 22%."
+      role: 'Partnership team',
+      name: 'Ava Patel',
+      avatar: 'https://i.pravatar.cc/120?img=65',
+      blurb: 'We finally have a single source of truth for partner influence. Deal cycles are down 22%.'
     },
     {
-      role: "Sales team",
-      name: "Jordan Lee",
-      avatar: "https://i.pravatar.cc/120?img=12",
-      blurb: "Rep‑friendly account overlays and intros from partners helped me hit quota two quarters in a row."
+      role: 'Sales team',
+      name: 'Jordan Lee',
+      avatar: 'https://i.pravatar.cc/120?img=12',
+      blurb: 'Rep‑friendly account overlays and intros from partners helped me hit quota two quarters in a row.'
     },
     {
-      role: "Growth team",
-      name: "Mia Chen",
-      avatar: "https://i.pravatar.cc/120?img=32",
-      blurb: "ICP matching made campaigns 3x more targeted. Better reach, lower CAC, happier partners."
+      role: 'Growth team',
+      name: 'Mia Chen',
+      avatar: 'https://i.pravatar.cc/120?img=32',
+      blurb: 'ICP matching made campaigns 3x more targeted. Better reach, lower CAC, happier partners.'
     },
     {
-      role: "CXOs",
-      name: "Daniel Rivera",
-      avatar: "https://i.pravatar.cc/120?img=5",
-      blurb: "Clear attribution and forecasting for partner‑sourced revenue—finally something board‑ready."
+      role: 'CXOs',
+      name: 'Daniel Rivera',
+      avatar: 'https://i.pravatar.cc/120?img=5',
+      blurb: 'Clear attribution and forecasting for partner‑sourced revenue—finally something board‑ready.'
     },
   ];
 
@@ -159,67 +159,12 @@ function Blog() {
   );
 }
 
-function Pricing() {
-  const plans = [
-    {
-      name: 'Starter',
-      price: '$0',
-      note: 'Free forever',
-      features: ['100 partner contacts', 'Basic enablement', 'Email support'],
-    },
-    {
-      name: 'Growth',
-      price: '$349',
-      note: 'per month',
-      features: ['Unlimited partners', 'Deal registration', 'ICP & intent matching', 'HubSpot/SFDC sync'],
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      note: 'Let’s talk',
-      features: ['Advanced security', 'SAML/SSO', 'Dedicated CSM', 'Custom integrations'],
-    },
-  ];
-
-  return (
-    <section id="pricing" className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">Simple, transparent pricing</h2>
-          <p className="mt-3 text-gray-600">Start free and scale as your partner program grows.</p>
-        </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {plans.map((pl) => (
-            <div key={pl.name} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-              <div className="flex items-baseline gap-2">
-                <h3 className="text-xl font-semibold text-gray-900">{pl.name}</h3>
-                <span className="text-sm text-gray-500">{pl.note}</span>
-              </div>
-              <div className="mt-4 text-3xl font-bold text-gray-900">{pl.price}</div>
-              <ul className="mt-6 space-y-2 text-sm text-gray-700">
-                {pl.features.map((f) => (
-                  <li key={f} className="flex gap-2">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-500" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <button className="mt-6 w-full px-4 py-2 rounded-md bg-black text-white text-sm font-medium hover:bg-gray-900">Choose {pl.name}</button>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Sections() {
   return (
     <>
       <Features />
       <Integrations />
       <Blog />
-      <Pricing />
     </>
   );
 }

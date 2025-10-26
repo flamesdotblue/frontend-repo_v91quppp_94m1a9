@@ -28,8 +28,8 @@ function Hero() {
             <button onClick={() => scrollTo('features')} className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-black text-white font-medium hover:bg-gray-900">
               Explore features
             </button>
-            <button onClick={() => scrollTo('pricing')} className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-white text-gray-900 font-medium ring-1 ring-gray-200 hover:bg-gray-50">
-              View pricing
+            <button onClick={() => scrollTo('integrations')} className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-white text-gray-900 font-medium ring-1 ring-gray-200 hover:bg-gray-50">
+              See integrations
             </button>
           </div>
           <div className="mt-6 text-sm text-gray-500">No credit card required • Free trial available</div>

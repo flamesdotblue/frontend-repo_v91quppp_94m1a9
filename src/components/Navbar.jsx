@@ -17,10 +17,9 @@ function Navbar() {
           <button onClick={() => scrollTo('features')} className="hover:text-gray-900">Features</button>
           <button onClick={() => scrollTo('integrations')} className="hover:text-gray-900">Integrations</button>
           <button onClick={() => scrollTo('blog')} className="hover:text-gray-900">Blog</button>
-          <button onClick={() => scrollTo('pricing')} className="hover:text-gray-900">Pricing</button>
         </nav>
         <div className="flex items-center gap-3">
-          <button onClick={() => scrollTo('pricing')} className="px-3 py-2 text-sm font-medium text-gray-800 hover:text-gray-900">Talk to sales</button>
+          <button onClick={() => scrollTo('integrations')} className="px-3 py-2 text-sm font-medium text-gray-800 hover:text-gray-900">Talk to sales</button>
           <button onClick={() => scrollTo('features')} className="px-3 py-2 text-sm font-medium bg-black text-white rounded-md hover:bg-gray-900">Get started</button>
         </div>
       </div>

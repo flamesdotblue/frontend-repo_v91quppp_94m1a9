@@ -18,7 +18,6 @@ function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
               <li><a href="#features" className="hover:text-gray-900">Features</a></li>
               <li><a href="#integrations" className="hover:text-gray-900">Integrations</a></li>
-              <li><a href="#pricing" className="hover:text-gray-900">Pricing</a></li>
             </ul>
           </div>
 
