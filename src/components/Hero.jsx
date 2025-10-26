@@ -1,46 +1,42 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
 
-export default function Hero() {
+function Hero() {
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
-    <section className="relative min-h-[92vh] w-full overflow-hidden bg-slate-950 text-white">
-      {/* 3D Spline background (acts like an animated video/image cover) */}
+    <section className="relative min-h-[92vh] w-full overflow-hidden">
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/vc19ejtcC5VJjy5v/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
-      {/* soft gradient overlays for readability */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/20 to-slate-950/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/70 to-white pointer-events-none" />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pt-28 pb-20 text-center">
-        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-medium text-white/80 backdrop-blur">
-          <span className="h-2 w-2 rounded-full bg-yellow-400" />
-          Modern Partner Platform
-        </span>
-        <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-          Partner Relationship Management
-          <span className="block bg-gradient-to-r from-yellow-300 to-emerald-300 bg-clip-text text-transparent">
-            built for growth teams
-          </span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-base text-white/80 sm:text-lg">
-          Unify partner onboarding, enablement, marketing, and deal collaboration in one beautiful platform. Accelerate revenue by empowering your ecosystem.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href="#features" className="rounded-lg bg-yellow-300 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-yellow-200">
-            Explore Features
-          </a>
-          <a href="#blog" className="rounded-lg border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15">
-            Read Insights
-          </a>
-        </div>
-        <div className="mt-10 grid w-full max-w-2xl grid-cols-2 gap-3 text-left text-xs text-white/70 sm:grid-cols-4">
-          <div className="rounded-md border border-white/10 bg-white/5 p-3">Unified PRM</div>
-          <div className="rounded-md border border-white/10 bg-white/5 p-3">Fast Onboarding</div>
-          <div className="rounded-md border border-white/10 bg-white/5 p-3">Enablement Hub</div>
-          <div className="rounded-md border border-white/10 bg-white/5 p-3">Co-Marketing</div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24">
+        <div className="max-w-3xl">
+          <span className="inline-flex items-center gap-2 text-xs font-medium px-2.5 py-1.5 rounded-full bg-amber-100 text-amber-800 ring-1 ring-amber-300">New • ICP for Partnerships</span>
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
+            Modern PRM for high‑velocity partner ecosystems
+          </h1>
+          <p className="mt-5 text-lg text-gray-600">
+            Unite partners, sales, and growth teams on a single platform. Onboard faster, enable continuously, and co‑sell with clarity using real‑time ICP matching and intent.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <button onClick={() => scrollTo('features')} className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-black text-white font-medium hover:bg-gray-900">
+              Explore features
+            </button>
+            <button onClick={() => scrollTo('pricing')} className="inline-flex items-center justify-center px-5 py-3 rounded-md bg-white text-gray-900 font-medium ring-1 ring-gray-200 hover:bg-gray-50">
+              View pricing
+            </button>
+          </div>
+          <div className="mt-6 text-sm text-gray-500">No credit card required • Free trial available</div>
         </div>
       </div>
     </section>
   );
 }
+
+export default Hero;
